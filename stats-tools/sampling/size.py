@@ -60,7 +60,7 @@ def simulated_guarantee(n,epsilon,n_sim=1000,p_true=0.5):
     p_hat = x/n
     return (np.abs(p_hat-p_true)<=epsilon).mean()
 
-def general_simulated_guarantee(n,epsilon,n_sim=1000,p_min=0.001,p_max=0.999,n_ps=200,measure=np.median):
+def general_simulated_guarantee(n,epsilon,n_sim=10000,p_min=0.001,p_max=0.999,n_ps=200,measure=np.min):
     '''
     Simulation guarantee for a set of values of p
     '''
